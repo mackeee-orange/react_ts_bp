@@ -1,0 +1,28 @@
+@import "size";
+@import "color";
+
+$primary-font: "Hiragino Kaku Gothic ProN", sans-serif;
+
+.commonFontStyle {
+  color: $black;
+  font-family: $primary-font;
+}
+
+.impactTitleFont {
+  @extend .commonFontStyle;
+  font-size: $f-size-xl;
+  font-weight: bold;
+  line-height: $f-size-xl;
+}
+
+.headlineFont {
+  @extend .commonFontStyle;
+  font-size: $f-size-lg;
+  font-weight: bold;
+}
+
+.descriptionFont {
+  @extend .commonFontStyle;
+  font-size: $f-size-md;
+  word-wrap: break-spaces;
+}

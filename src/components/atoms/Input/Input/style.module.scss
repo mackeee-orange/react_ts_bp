@@ -1,0 +1,155 @@
+@import "src/assets/styles/modules";
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill {
+  box-shadow: 0 0 0 100px $white inset;
+}
+
+$height-sm: 20px;
+$height-md: 40px;
+$height-lg: 60px;
+
+// size
+.sm {
+  font-size: $f-size-sm;
+  height: $height-sm !important;
+}
+
+.md {
+  font-size: $f-size-md;
+  height: $height-md !important;
+}
+
+.lg {
+  font-size: $f-size-md;
+  height: $height-lg !important;
+}
+
+.required {
+  background-color: $primary-color;
+  color: $white;
+  display: inline-flex;
+  font-size: $f-size-sm;
+  margin-right: $space-sm;
+  padding: $space-base $space-xs;
+}
+
+.input {
+  background-color: $content-bg-color;
+  height: $height-md;
+}
+
+.inputContent {
+  background-color: transparent;
+  border-radius: $radius-xs;
+  width: 100%;
+}
+
+.ghost {
+  background: none !important;
+  border-radius: $radius-md;
+  height: 40px;
+  padding: 0 $space-sm;
+
+  &.underline {
+    border-bottom: 1px solid $line-color;
+    border-radius: 0;
+  }
+}
+
+.baseContainer {
+  align-items: center;
+  border-radius: $radius-sm;
+  display: inline-flex;
+  padding: 0 $space-sm;
+
+  input {
+    width: 100%;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+}
+
+.inputWrap {
+  background-color: $white;
+  border: 1px solid $line-color;
+  border-radius: $radius-md;
+  padding: 0 $space-xs;
+}
+
+.outlined {
+  border: 1px solid $line-color;
+}
+
+.rounded {
+  border-radius: $height-md / 2;
+
+  &.sm {
+    border-radius: $height-sm / 2;
+  }
+  &.md {
+    border-radius: $height-md / 2;
+  }
+  &.lg {
+    border-radius: $height-lg / 2;
+  }
+}
+
+.wide {
+  width: 100%;
+}
+
+.prefixIcon {
+  align-items: center;
+  display: flex;
+  flex: none;
+  font-size: $f-size-md + 2px;
+  justify-content: center;
+  margin-right: $space-xs;
+  span {
+    align-items: center;
+    display: flex;
+    flex: none;
+    font-size: 1.1em;
+    justify-content: center;
+  }
+
+  &.sm {
+    font-size: $f-size-sm + 2px;
+    height: 100%;
+    margin-right: $space-base;
+  }
+
+  &.md {
+    font-size: $f-size-md + 2px;
+    height: 100%;
+    margin-right: $space-xs;
+  }
+
+  &.lg {
+    font-size: $f-size-lg + 2px;
+    height: 100%;
+    margin-right: $space-md;
+  }
+}
+
+.searchIcon svg {
+  color: $white;
+}
+
+.searchIcon {
+  margin-right: $space-base;
+}
+
+.inputGroup {
+  align-items: center;
+  display: flex;
+}
+
+.inputWrapper {
+  &[data-margin="true"] {
+    margin-left: 53px;
+  }
+}

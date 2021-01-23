@@ -1,0 +1,68 @@
+@import "src/assets/styles/modules";
+
+$height-sm: 20px;
+$height-md: 40px;
+$height-lg: 60px;
+
+.input {
+  min-width: 240px;
+  width: 100%;
+
+  > div {
+    border-radius: $radius-sm !important;
+    overflow: hidden;
+    padding: $space-xs $space-sm !important;
+  }
+
+  > span {
+    right: $space-sm !important;
+    top: 50% !important;
+  }
+
+  &.outlined {
+    > div {
+      background-color: $white !important;
+      border: 1px solid $line-color !important;
+    }
+  }
+
+  &.squared {
+    > div {
+      border-radius: $radius-md;
+    }
+  }
+
+  &.sm {
+    height: $height-sm !important;
+
+    &.squared {
+      > div {
+        border-radius: $radius-sm !important;
+      }
+    }
+  }
+
+  &.md {
+    height: $height-md !important;
+
+    &.squared {
+      > div {
+        border-radius: $radius-md !important;
+      }
+    }
+  }
+
+  &.lg {
+    height: $height-lg !important;
+
+    &.squared {
+      > div {
+        border-radius: $radius-lg !important;
+      }
+    }
+  }
+
+  &.wide {
+    width: 100%;
+  }
+}

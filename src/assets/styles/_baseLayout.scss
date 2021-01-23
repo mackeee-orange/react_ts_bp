@@ -1,0 +1,37 @@
+@import "modules";
+
+.sectionInnerWrap {
+  margin: 0 auto;
+  padding: 0 $space-xl;
+
+  @include mediaQuery(md) {
+    margin: 0 32px;
+  }
+
+  @include mediaQuery(lg) {
+    margin: 0 auto;
+    width: $max-page-content-width;
+  }
+
+  @media screen and (min-width: 1400px) {
+    padding: 0 160px;
+    width: 100%;
+  }
+}
+
+.centerWrap {
+  text-align: center;
+  > * {
+    margin: 0 auto;
+  }
+}
+
+.colVCenter {
+  align-items: center;
+  display: flex;
+}
+
+.colHCenter {
+  display: flex;
+  justify-content: center;
+}

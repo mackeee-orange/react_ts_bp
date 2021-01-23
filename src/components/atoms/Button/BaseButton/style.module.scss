@@ -1,0 +1,152 @@
+@import "src/assets/styles/modules";
+
+// FIXME: !importは敗北なのでいつか修正する
+
+$height-sm: 24px;
+$height-md: 32px;
+$height-lg: 48px;
+
+.button {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  line-height: 1;
+  outline: 0;
+  padding: 0 $space-xs;
+  text-align: center;
+
+  // color
+  &[data-color="primary"] {
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  &[data-color="secondary"] {
+    background-color: $white;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+
+  &[data-color="danger"] {
+    background-color: $white;
+    border: 1px solid $danger-color;
+    color: $danger-color;
+  }
+
+  &[data-color="white"] {
+    background-color: $white;
+    color: $primary-color;
+
+    &[data-outlined="true"] {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  &[data-color="black"] {
+    background-color: $black;
+    color: $white;
+  }
+
+  &[data-color="gray"] {
+    background-color: $light-gray;
+    color: $black;
+  }
+
+  &[data-color="gradation"] {
+    @include primary-gradient();
+    color: $white;
+  }
+
+  &[data-color="darkGray"] {
+    background-color: $dark-gray;
+    color: $white;
+  }
+
+  &[data-color="lightGray"] {
+    background-color: $light-gray;
+    color: $black;
+  }
+
+  // size
+  &[data-size="sm"] {
+    height: $height-sm;
+    padding: auto $space-xs !important;
+    &[data-shape="circle"] {
+      width: $height-sm;
+    }
+
+    &[data-shape="square"] {
+      border-radius: $radius-xs;
+    }
+
+    &[data-shape="roundSquare"] {
+      border-radius: $height-sm / 2;
+    }
+  }
+
+  &[data-size="md"] {
+    height: $height-md;
+    padding: auto $space-sm !important;
+    &[data-shape="circle"] {
+      width: $height-md;
+    }
+
+    &[data-shape="square"] {
+      border-radius: $radius-xs;
+    }
+
+    &[data-shape="roundSquare"] {
+      border-radius: $height-md / 2;
+    }
+  }
+
+  &[data-size="lg"] {
+    height: $height-lg;
+    padding: auto $space-sm !important;
+    &[data-shape="circle"] {
+      width: $height-lg;
+    }
+
+    &[data-shape="square"] {
+      border-radius: $radius-md;
+    }
+
+    &[data-shape="roundSquare"] {
+      border-radius: $height-lg / 2;
+    }
+  }
+
+  // disabled
+  &[data-disabled="true"] {
+    background-color: $disabled-color;
+    border: 0 !important;
+    color: $white;
+  }
+
+  // dropShadow
+  &[data-shadow="sm"] {
+    @include drop-shadow(sm);
+  }
+
+  &[data-shadow="md"] {
+    @include drop-shadow(md);
+  }
+
+  &[data-shadow="lg"] {
+    @include drop-shadow(lg);
+  }
+
+  &[data-wide="true"] {
+    width: 100%;
+  }
+
+  &:hover {
+    filter: brightness(1.08);
+  }
+}
+
+.icon {
+  margin-right: $space-base;
+}

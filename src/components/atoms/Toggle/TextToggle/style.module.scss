@@ -1,0 +1,11 @@
+@import "src/assets/styles/modules";
+
+.button {
+  background: none;
+  font-size: $f-size-sm;
+  margin: 0 4px;
+}
+
+.active {
+  color: $primary-color;
+}

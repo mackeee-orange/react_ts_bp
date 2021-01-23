@@ -1,0 +1,19 @@
+@import "src/assets/styles/modules";
+
+// TODO: あとでサイズ調整
+.sectionInnerWrap {
+  margin: 0 auto;
+  max-width: 700px;
+
+  &.sm {
+    max-width: 700px;
+  }
+
+  &.md {
+    max-width: 700px;
+  }
+
+  &.lg {
+    max-width: 700px;
+  }
+}

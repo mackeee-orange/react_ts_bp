@@ -1,0 +1,28 @@
+@import "src/assets/styles/modules";
+
+.pageTitleWrap {
+  height: 46px;
+  position: relative;
+
+  &::after {
+    background-color: $active-color;
+    content: "";
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+    z-index: $z-index-base;
+  }
+
+  .pageTitle {
+    font-family: Roboto, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 37px;
+    margin: 8px 0 0 8px;
+    position: absolute;
+    z-index: $z-index-base;
+  }
+}

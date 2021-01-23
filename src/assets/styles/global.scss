@@ -1,0 +1,98 @@
+@import "reset";
+@import "~antd/dist/antd.css";
+@import "baseLayout";
+@import "modules";
+
+html {
+  background-color: $content-bg-color;
+  color: $black;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+    Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo,
+    sans-serif;
+  font-feature-settings: "kern";
+  font-kerning: normal;
+  font-size: 62.5%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+
+body {
+  letter-spacing: 0.05rem;
+}
+
+* {
+  appearance: none;
+}
+
+iframe,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  height: auto;
+  vertical-align: top;
+  width: 100%;
+}
+
+ul {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Text
+h1 {
+  font-size: $f-size-xl;
+}
+h2 {
+  font-size: $f-size-lg;
+  font-weight: bold;
+}
+h3 {
+  font-size: $f-size-md;
+}
+h4 {
+  font-size: $f-size-sm;
+}
+h5 {
+  font-size: $f-size-xs;
+}
+b,
+p {
+  font-size: $f-size-md;
+}
+
+button {
+  background-color: transparent;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+table td {
+  border-bottom: solid 1px $line-color;
+  border-collapse: collapse;
+  padding: $space-sm;
+}

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "app"
+  },
+  "targets": {
+    "app": {
+      "hosting": {
+        "prd": [
+          "app"
+        ]
+      }
+    }
+  }
+}

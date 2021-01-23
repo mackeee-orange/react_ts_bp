@@ -1,0 +1,95 @@
+@import "src/assets/styles/modules";
+
+.commonFontStyle {
+  color: $black;
+  font-family: $primary-font;
+}
+
+.impactTitleFont {
+  @extend .commonFontStyle;
+  font-size: $f-size-xl;
+  font-weight: bold;
+  line-height: $f-size-xl;
+}
+
+.headlineFont {
+  @extend .commonFontStyle;
+  font-size: $f-size-lg;
+  font-weight: bold;
+}
+
+.descriptionFont {
+  @extend .commonFontStyle;
+  font-size: $f-size-md;
+  word-wrap: break-spaces;
+}
+
+.base {
+  color: $black;
+  font: $primary-font;
+  font-size: $f-size-md;
+  position: relative;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  border-bottom: solid 1px $black;
+  padding-bottom: $space-xs;
+}
+
+// color types
+.primary {
+  color: $primary-color;
+}
+
+.secondary {
+  color: $secondary-color;
+}
+
+.danger {
+  color: $danger-color;
+}
+
+.darkGray {
+  color: $dark-gray;
+}
+
+.mediumGray {
+  color: $medium-gray;
+}
+
+.disabled {
+  color: $disabled-color;
+}
+
+.sub {
+  color: $medium-gray;
+}
+
+.opposite {
+  color: $white;
+}
+
+// size
+.xs {
+  font-size: $f-size-xs;
+}
+
+.sm {
+  font-size: $f-size-sm;
+}
+
+.md {
+  font-size: $f-size-md;
+}
+
+.lg {
+  font-size: $f-size-lg;
+}
+
+.xl {
+  font-size: $f-size-xl;
+}

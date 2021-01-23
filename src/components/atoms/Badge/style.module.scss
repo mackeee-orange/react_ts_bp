@@ -1,0 +1,26 @@
+@import "src/assets/styles/modules";
+
+.circle {
+  align-items: center;
+  background-color: $danger-color;
+  border-radius: 50%;
+  color: $white;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 16px;
+  justify-content: center;
+  width: 16px;
+}
+
+.roundSquare {
+  align-items: center;
+  background-color: $secondary-color;
+  border-radius: 10px;
+  color: $white;
+  display: inline-flex;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 21px;
+  justify-content: center;
+  padding: $space-base $space-md;
+}

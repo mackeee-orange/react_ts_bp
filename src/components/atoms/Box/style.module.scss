@@ -1,0 +1,123 @@
+@import "src/assets/styles/modules";
+
+.box {
+  &[data-vpad="xs"] {
+    padding-bottom: $space-xs;
+    padding-top: $space-xs;
+  }
+  &[data-vpad="sm"] {
+    padding-bottom: $space-sm;
+    padding-top: $space-sm;
+  }
+  &[data-vpad="md"] {
+    padding-bottom: $space-md;
+    padding-top: $space-md;
+  }
+  &[data-vpad="lg"] {
+    padding-bottom: $space-lg;
+    padding-top: $space-lg;
+  }
+  &[data-vpad="xl"] {
+    padding-bottom: $space-xl;
+    padding-top: $space-xl;
+  }
+
+  &[data-hpad="xs"] {
+    padding-left: $space-xs;
+    padding-right: $space-xs;
+  }
+  &[data-hpad="sm"] {
+    padding-left: $space-sm;
+    padding-right: $space-sm;
+  }
+  &[data-hpad="md"] {
+    padding-left: $space-md;
+    padding-right: $space-md;
+  }
+  &[data-hpad="lg"] {
+    padding-left: $space-lg;
+    padding-right: $space-lg;
+  }
+  &[data-hpad="xl"] {
+    padding-left: $space-xl;
+    padding-right: $space-xl;
+  }
+
+  &[data-vmar="xs"] {
+    margin-bottom: $space-xs;
+    margin-top: $space-xs;
+  }
+  &[data-vmar="sm"] {
+    margin-bottom: $space-sm;
+    margin-top: $space-sm;
+  }
+  &[data-vmar="md"] {
+    margin-bottom: $space-md;
+    margin-top: $space-md;
+  }
+  &[data-vmar="lg"] {
+    margin-bottom: $space-lg;
+    margin-top: $space-lg;
+  }
+  &[data-vmar="xl"] {
+    margin-bottom: $space-xl;
+    margin-top: $space-xl;
+  }
+
+  &[data-hmar="xs"] {
+    margin-left: $space-xs;
+    margin-right: $space-xs;
+  }
+  &[data-hmar="sm"] {
+    margin-left: $space-sm;
+    margin-right: $space-sm;
+  }
+  &[data-hmar="md"] {
+    margin-left: $space-md;
+    margin-right: $space-md;
+  }
+  &[data-hmar="lg"] {
+    margin-left: $space-lg;
+    margin-right: $space-lg;
+  }
+  &[data-hmar="xl"] {
+    margin-left: $space-xl;
+    margin-right: $space-xl;
+  }
+
+  &[data-padding="xs"] {
+    padding: $space-xs;
+  }
+  &[data-padding="sm"] {
+    padding: $space-sm;
+  }
+  &[data-padding="md"] {
+    padding: $space-md;
+  }
+  &[data-padding="lg"] {
+    padding: $space-lg;
+  }
+  &[data-padding="xl"] {
+    padding: $space-xl;
+  }
+
+  &[data-margin="xs"] {
+    margin: $space-xs;
+  }
+  &[data-margin="sm"] {
+    margin: $space-sm;
+  }
+  &[data-margin="md"] {
+    margin: $space-md;
+  }
+  &[data-margin="lg"] {
+    margin: $space-lg;
+  }
+  &[data-margin="xl"] {
+    margin: $space-xl;
+  }
+
+  &.inline {
+    display: inline;
+  }
+}

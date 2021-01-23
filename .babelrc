@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    [
+      "react-css-modules",
+      {
+        "filetypes": {
+          ".scss": {
+            "syntax": "postcss-scss"
+          }
+        }
+      }
+    ],
+    [
+      "i18next-extract",
+      {
+        "locales": ["ja", "en"],
+        "outputPath": "./src/locales/{{locale}}.json"
+      }
+    ]
+  ],
+  "presets": [
+    "react-app"
+  ]
+}

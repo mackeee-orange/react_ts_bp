@@ -1,0 +1,51 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "prettier"
+  ],
+  "rules": {
+    "react/jsx-uses-vars": "warn",
+    "react/jsx-uses-react": "warn",
+    "no-console": "warn",
+    "prettier/prettier": "error",
+    "sort-imports": "off",
+    "max-len": ["error", {
+      "code": 100,
+      "ignorePattern": "^import\\s.+\\sfrom\\s.+;$",
+      "ignoreUrls": true,
+      "ignoreComments": true
+    }],
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-empty-interface": 0
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "node": {
+        "paths": "src"
+      }
+    }
+  }
+}

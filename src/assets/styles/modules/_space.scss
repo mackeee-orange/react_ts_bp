@@ -1,0 +1,90 @@
+@import "size";
+
+$space-base: 4px;
+$space-xs: 8px;
+$space-sm: 16px;
+$space-md: 24px;
+$space-lg: 32px;
+$space-xl: 48px;
+
+$spaces: $space-xs, $space-sm, $space-md, $space-lg, $space-xl;
+$directions: Top, Left, Right, Bottom;
+
+@each $rank in $size-ranks {
+  $idx: index($size-ranks, $rank);
+  $space: nth($spaces, $idx);
+
+  .#{$rank}Padding {
+    padding: $space;
+  }
+
+  .#{$rank}VPadding {
+    padding-bottom: $space;
+    // 複数のクラスをマージするときにpaddingが上書きされないようにあえて分けてる
+    padding-top: $space;
+  }
+
+  .#{$rank}HPadding {
+    // 複数のクラスをマージするときにpaddingが上書きされないようにあえて分けてる
+    padding-left: $space;
+    padding-right: $space;
+  }
+
+  .#{$rank}Margin {
+    margin: $space;
+  }
+
+  .#{$rank}VMargin {
+    margin-bottom: $space;
+    // 複数のクラスをマージするときにpaddingが上書きされないようにあえて分けてる
+    margin-top: $space;
+  }
+
+  .#{$rank}HMargin {
+    // 複数のクラスをマージするときにpaddingが上書きされないようにあえて分けてる
+    margin-left: $space;
+    margin-right: $space;
+  }
+
+  .#{$rank}PaddingTop {
+    padding-top: $space;
+  }
+
+  .#{$rank}PaddingBottom {
+    padding-bottom: $space;
+  }
+
+  .#{$rank}PaddingRight {
+    padding-right: $space;
+  }
+
+  .#{$rank}PaddingLeft {
+    padding-left: $space;
+  }
+
+  .#{$rank}MarginTop {
+    margin-top: $space;
+  }
+
+  .#{$rank}MarginBottom {
+    margin-bottom: $space;
+  }
+
+  .#{$rank}MarginRight {
+    margin-right: $space;
+  }
+
+  .#{$rank}MarginLeft {
+    margin-left: $space;
+  }
+
+  @each $direction in $directions {
+    .#{$rank}#{to_upper_case(str_slice($direction, 1, 1))}#{str_slice($direction, 2)}Padding {
+      padding-#{to_lower_case($direction)}: $space;
+    }
+
+    .#{$rank}#{to_upper_case(str_slice($direction, 1, 1))}#{str_slice($direction, 2)}Margin {
+      margin-#{to_lower_case($direction)}: $space;
+    }
+  }
+}

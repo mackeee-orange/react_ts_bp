@@ -1,0 +1,41 @@
+@import "src/assets/styles/modules";
+
+.modalArea {
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $z-index-modal;
+}
+
+.modalOverlay {
+  animation: fade-in 0.3s forwards;
+  background-color: rgba($black, 0.3);
+  bottom: 0;
+  height: auto;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.modalContent {
+  background-color: $white;
+  border-radius: 20px;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

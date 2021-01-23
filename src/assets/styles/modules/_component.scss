@@ -1,0 +1,16 @@
+@import "color";
+@import "size";
+
+.errorMessage {
+  color: $danger-color;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.link {
+  color: $black;
+  font-size: $f-size-md;
+  font-weight: bold;
+}

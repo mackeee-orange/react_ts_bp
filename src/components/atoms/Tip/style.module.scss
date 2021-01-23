@@ -1,0 +1,21 @@
+@import "src/assets/styles/modules";
+
+.tip {
+  align-items: center;
+  background-color: $light-gray;
+  border-radius: 20px;
+  display: inline-flex;
+  font-size: 1.2rem;
+  height: 34px;
+  justify-content: center;
+  padding: $space-xs $space-sm;
+}
+
+.text {
+  margin-right: $space-sm;
+}
+
+.onClickClose svg {
+  height: 20px;
+  width: 20px;
+}

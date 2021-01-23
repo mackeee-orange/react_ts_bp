@@ -1,0 +1,29 @@
+@import "src/assets/styles/modules";
+
+.link {
+  font-weight: normal;
+
+  &[data-color="primary"] {
+    color: $primary-color;
+  }
+
+  &[data-color="secondary"] {
+    color: $secondary-color;
+  }
+
+  &[data-color="danger"] {
+    color: $danger-color;
+  }
+
+  &[data-color="black"] {
+    color: $black;
+  }
+
+  &[data-color="white"] {
+    color: $white;
+  }
+
+  &[data-color="darkGray"] {
+    color: $dark-gray;
+  }
+}
