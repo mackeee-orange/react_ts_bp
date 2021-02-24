@@ -15,9 +15,7 @@ type AuthComponentProps = {
 
 const AuthComponent: FC<AuthComponentProps> = ({ lazy, inRegistration, children }) => {
   const { isLoggedIn } = useCurrentAccount(true, !!inRegistration);
-  return (
-    <Fragment>{lazy || isLoggedIn ? children : <Redirect to={routes.signIn()} />}</Fragment>
-  );
+  return <Fragment>{lazy || isLoggedIn ? children : <Redirect to={routes.signIn()} />}</Fragment>;
 };
 
 const AuthRoute: FC<Props> = ({ immediately = true, inRegistration, ...rest }) => {

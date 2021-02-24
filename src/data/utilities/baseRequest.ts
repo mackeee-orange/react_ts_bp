@@ -45,13 +45,13 @@ abstract class BaseRequest<
   readonly contentType: ContentType = "json";
 
   // primary function
-  async call(variables: {
+  async call(variables?: {
     id?: string;
     params?: object;
     urlParams?: TUrlParams;
     qParams?: TQParams;
   }): Promise<TPayload> {
-    const { params, urlParams, qParams } = variables;
+    const { params, urlParams, qParams } = variables || {};
     const pParams: object | FormData | undefined = (() => {
       if (params === undefined) return undefined;
 
@@ -77,6 +77,10 @@ abstract class BaseRequest<
                     } else if (typeof inner[k] === "object" && Array.isArray(inner[k])) {
                       // Arrayの場合
                       const data = inner[k] as string[]; // FIXME: string以外もあるかも
+                      //配列が空の場合は空の配列を渡せるようにした。
+                      if (!data[0]) {
+                        fData.append(`${humps.decamelize(key)}[${humps.decamelize(k)}][]`, "");
+                      }
                       data.forEach(d => {
                         fData.append(`${humps.decamelize(key)}[${humps.decamelize(k)}][]`, d);
                       });
@@ -126,6 +130,8 @@ abstract class BaseRequest<
             throw new OutOfSpecError("HTTPMethod");
         }
       })();
+      if (res === undefined) throw new ServerError("通信エラーが発生しました");
+
       return res.data;
     } catch (e) {
       throw new ServerError(e);
